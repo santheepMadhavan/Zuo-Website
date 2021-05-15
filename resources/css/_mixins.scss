@@ -1,0 +1,52 @@
+$white: #ffffff;
+$primary: #13aa57;
+$text-primary: #66bb6a;
+$secondary: #000000;
+$text-secondary: #263238;
+$white-shadow: #f0f2f4;
+
+@mixin text-content($element) {
+  .#{$element} {
+    &__title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 1.39;
+      width: 90%;
+    }
+
+    &__desc {
+      margin-top: 32px;
+      font-size: 18px;
+      line-height: 1.78;
+      font-weight: normal;
+      color: #263238;
+      width: 80%;
+    }
+
+    &__btn {
+      height: 48px;
+      padding: 16px 24px;
+      margin-top: 32px;
+      border-radius: 5px;
+      color: $white;
+      box-shadow: 0 13px 20px 0 rgba(118, 196, 125, 0.41);
+      background-color: $text-primary;
+      border: none;
+      font-size: 16px;
+    }
+  }
+  @content;
+}
+
+@mixin info-content($element) {
+  .#{$element} {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__desc {
+      width: 100%;
+    }
+  }
+  @content;
+}
